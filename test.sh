@@ -61,5 +61,28 @@ echo GET /test/list -- with USER321_TOKEN
 curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/list"
 echo
 
+echo GET /test/drop-all -- with USER321_TOKEN
+curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/drop-all"
+echo
+
+echo GET /test/list -- with USER321_TOKEN
+curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/list"
+echo
+
+## Switch the user back: User123
+TOKEN=${USER123_TOKEN}
+
+echo GET /test/list -- with USER123_TOKEN
+curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/list"
+echo
+
+echo GET /test/drop-all -- with USER123_TOKEN
+curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/drop-all"
+echo
+
+echo GET /test/list -- with USER123_TOKEN
+curl -sb -H 'Accept: application/json' -H "Authorization: Bearer ${TOKEN}" "${URL_BASE}/test/list"
+echo
+
 echo
 pause 'Press [Enter] key to continue...'
