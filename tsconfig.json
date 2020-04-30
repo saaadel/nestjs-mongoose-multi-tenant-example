@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "strictBindCallApply": true,
+    "target": "es2017"
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test",
+    "**/*spec.ts",
+    "submodule"
+  ]
+}
